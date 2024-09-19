@@ -105,3 +105,27 @@ func counth(c chan string) {
 
 
 }
+
+//OUT:
+//Starting: /go/bin/dlv dap --listen=127.0.0.1:33973 --log-dest=3 from /workspaces/Up-and-Running-with-Concurrency-in-Go-Golang-/8-IO_Bound_vs_CPU_Bound/CPU_3-channels
+// DAP server listening at: 127.0.0.1:33973
+// 2
+// BBBB is starting  
+// AAAA is starting  
+// DDDD is starting     
+// FFFF is starting     
+// HHHH is starting     
+// GGGG is starting     
+// CCCC is starting     
+// EEEE is starting     
+// HHHH is done
+// BBBB is done
+// FFFF is done
+// DDDD is done
+// CCCC is done
+// GGGG is done
+// EEEE is done
+// AAAA is done
+// Processes took 1m33.979334774s                       <----- should have shown speed up with coros and 1 channel, authors machine crunches in 3 secs w/ coros and channel
+// Process 101191 has exited with status 0
+// dlv dap (101147) exited with code: 0
