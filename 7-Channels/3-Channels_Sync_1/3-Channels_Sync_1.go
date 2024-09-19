@@ -28,3 +28,11 @@ func reportResult(goChan chan int, mainChan chan string) {
 	// blocks until it can read something from goChan - printed
 	mainChan <- "You can quit now.  I'm done." // This is just for clarity.
 }
+
+//OUT:
+//Starting: /go/bin/dlv dap --listen=127.0.0.1:33491 --log-dest=3 from /workspaces/Up-and-Running-with-Concurrency-in-Go-Golang-/7-Channels/3-Channels_Sync_1
+// DAP server listening at: 127.0.0.1:33491
+// Calculating for 3 seconds...
+// The result of 97 squared is 9409
+// Process 73214 has exited with status 0
+// dlv dap (73169) exited with code: 0
