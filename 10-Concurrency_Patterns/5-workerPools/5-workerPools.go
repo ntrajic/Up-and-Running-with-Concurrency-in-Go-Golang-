@@ -13,7 +13,7 @@ func main() {
 	jobsChan := make(chan int, numJobs)          	// creates a buffered channel large enough to hold all jobs  NON_BLOCKING CHANNEL, w/ CAPACITY==#ofJobs (100)
 	completedJobsChan := make(chan int, numJobs) 	// creates a buffered channel large enough to hold all completed jobs
 
-	for w := 1; w <= 3; w++ { // this is number of workers.  Each worker will be a goroutine.  (3 go coros)
+	for w := 1; w <= 3; w++ { 						// this is number of workers.  Each worker will be a goroutine.  (3 go coros)
 		go worker(w, jobsChan, completedJobsChan) 	// create worker w - pass worker number and both channels
 	}
 
